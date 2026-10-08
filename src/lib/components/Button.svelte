@@ -16,7 +16,9 @@
     let {
         variante = 'normale',
         href,
-        children
+        children,
+        ...rest // cette variable contient tous les autres attribus en plus. Ils seront envoyé tel quel
+                // exemple : <Button style="margin-left: 2rem;">
     }: Props = $props();
 </script>
 
@@ -24,6 +26,7 @@
     this={href ? 'a' : 'button'}
     href={href ? href : undefined}
     class={`button button-${variante}`}
+    {...rest}
 >
     {#if children}
         {@render children()}

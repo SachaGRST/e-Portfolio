@@ -10,5 +10,4 @@
 
     <Button href="projets/">Mes projets</Button>
     <Button variante="transparent">Mon CV</Button>
-
 </main>
