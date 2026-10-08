@@ -5,7 +5,7 @@
 
 	let { children }: LayoutProps = $props();
 
-    import Button from '$lib/components/Button.svelte';
+    import Button from '#lib/components/Button.svelte';
 </script>
 
 <div>

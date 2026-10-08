@@ -7,7 +7,7 @@
 	import type { LayoutProps } from './$types';
 
     // importe le style de base
-    import '$lib/styles/base.css';
+    import '#lib/styles/base.css';
 
     // le children est un Snippet, il contient le code HTML, CSS, TS de la page +page.svelte
     // il peut être rendu par le layout avec @render

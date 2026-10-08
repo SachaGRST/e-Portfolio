@@ -1,8 +1,8 @@
 <script lang="ts">
     import type { PageProps } from './$types';
-    import type { Projet } from '$lib/types/types';
+    import type { Projet } from '#lib/types/types';
 
-    import Button from '$lib/components/Button.svelte';
+    import Button from '#lib/components/Button.svelte';
 
     // les données du +page.server.ts
 	let { data }: PageProps = $props();

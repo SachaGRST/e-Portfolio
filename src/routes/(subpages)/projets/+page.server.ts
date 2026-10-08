@@ -8,8 +8,8 @@
 // pour en savoir plus : https://svelte.dev/docs/kit/load#Page-data
 
 import type { PageServerLoad } from './$types';
-import type { Projet } from '$lib/types/types';
-import projetsJson from '$lib/assets/projects.json';
+import type { Projet } from '#lib/types/types';
+import projetsJson from '#lib/assets/projects.json';
 
 export const load: PageServerLoad = async () => {
     const projets: Projet[] = projetsJson;
