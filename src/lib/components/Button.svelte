@@ -1,12 +1,12 @@
 <script lang="ts">
-    // ce type contient du contenue HTML
+    // ce type contient du contenu HTML
     import type { Snippet } from '$types';
 
-    // c'est une bonne pratique de définir le type attendue en input du composant
+    // c'est une bonne pratique de définir le type attendu en input du composant
     interface Props {
         variante?: 'normale' | 'transparent'; // le point d'interrogation signifie optionel
         href?: string;
-        children: Snippet; // un children contient toutes les balises intérieurs au celle là
+        children: Snippet; // un children contient toutes les balises contenues dans le composant
     }
 
     // Ces variables sont les inputs du composant
