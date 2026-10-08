@@ -3,7 +3,7 @@
 
 import type { PageServerLoad } from './$types';
 import type { Projet } from '$lib/types/types';
-import projects from '$lib/assets/projects.json'; // Ou importe le directement depuis static selon ta config
+import projects from '$lib/assets/projects.json';
 import { error } from '@sveltejs/kit';
 
 export const load: PageServerLoad = async ({ params }) => {

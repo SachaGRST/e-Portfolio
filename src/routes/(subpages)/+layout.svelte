@@ -10,6 +10,6 @@
 
 <div>
     <Button href="/">Retour</Button>
-    <p>Ce retour est présent dans le <a href="https://git.inpt.fr/net7/eportfolio-forma/-/tree/main/src/routes/(subpages)/+layout.svelte">layout.svelte</a></p>
+    <p><i>Ce retour est présent dans le <a href="https://git.inpt.fr/net7/eportfolio-forma/-/tree/main/src/routes/(subpages)/+layout.svelte">layout.svelte</a></i></p>
     {@render children()}
 </div>
