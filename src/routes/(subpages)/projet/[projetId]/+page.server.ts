@@ -2,7 +2,7 @@
 // c'est ici qu'on récupère les données et qu'on les fournit au front (+page.svelte)
 
 import type { PageServerLoad } from './$types';
-import type { Projet } from '#lib/types/types';
+import type { Projet } from '#lib/types/types.ts';
 import projects from '#lib/assets/projects.json';
 import { error } from '@sveltejs/kit';
 

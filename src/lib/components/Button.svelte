@@ -1,6 +1,6 @@
 <script lang="ts">
-    // ce type contient du contenu HTML
-    import type { Snippet } from '$types';
+    import type { Snippet } from "svelte";
+
 
     // c'est une bonne pratique de définir le type attendu en input du composant
     interface Props {

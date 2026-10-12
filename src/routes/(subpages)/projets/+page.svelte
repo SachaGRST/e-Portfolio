@@ -1,6 +1,6 @@
 <script lang="ts">
     import type { PageProps } from './$types';
-    import type { Projet } from '#lib/types/types';
+    import type { Projet } from '#lib/types/types.ts';
 
     import Button from '#lib/components/Button.svelte';
 
