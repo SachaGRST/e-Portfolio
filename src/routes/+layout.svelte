@@ -17,6 +17,7 @@
 <!-- svelte:head est un alias, si vous allez dans src/app.html, vous voyez son emplacement -->
 <!-- il remplace %sveltekit.head% -->
 <!-- c'est comme ça qu'on défini l'icone du site, dans le head -->
+<!-- vous pouvez ajouter d'autres meta/links ici -->
 <svelte:head>
 	<link rel="icon" href={favicon} />
 </svelte:head>
