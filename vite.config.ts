@@ -19,7 +19,7 @@ export default defineConfig({
 			// sur GitHub Pages, le site est servi sous /<nom-du-repo>/
 			// BASE_PATH est défini par le workflow GitHub Actions, vide en local
 			paths: {
-				base: process.env.BASE_PATH ?? ''
+				base: (process.env.BASE_PATH ?? '') as '' | `/${string}`
 			}
 		})
 	]
