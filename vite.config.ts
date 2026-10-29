@@ -1,4 +1,4 @@
-import adapter from '@sveltejs/adapter-auto';
+import adapter from '@sveltejs/adapter-static';
 import { sveltekit } from '@sveltejs/kit/vite';
 import { defineConfig } from 'vite';
 
@@ -12,10 +12,15 @@ export default defineConfig({
 			},
             // alias: { '#lib': 'src/lib' },
 
-			// adapter-auto only supports some environments, see https://svelte.dev/docs/kit/adapter-auto for a list.
-			// If your environment is not supported, or you settled on a specific environment, switch out the adapter.
-			// See https://svelte.dev/docs/kit/adapters for more information about adapters.
-			adapter: adapter()
+			// adapter-static génère un site 100% statique (HTML/CSS/JS) dans le dossier build/
+			// voir https://svelte.dev/docs/kit/adapter-static
+			adapter: adapter({ fallback: '404.html' }),
+
+			// sur GitHub Pages, le site est servi sous /<nom-du-repo>/
+			// BASE_PATH est défini par le workflow GitHub Actions, vide en local
+			paths: {
+				base: process.env.BASE_PATH ?? ''
+			}
 		})
 	]
 });

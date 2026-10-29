@@ -6,8 +6,8 @@
 </script>
 
 <main>
-    <h1>Mon super eportfolio</h1>
+    <h1>GARROUSTE Sacha</h1>
 
     <Button href="projets/">Mes projets</Button>
-    <Button variante="transparent">Mon CV</Button>
+    <Button href="CV/">Mon CV</Button>
 </main>

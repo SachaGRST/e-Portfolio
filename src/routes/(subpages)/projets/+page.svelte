@@ -3,6 +3,7 @@
     import type { Projet } from '#lib/types/types.ts';
 
     import Button from '#lib/components/Button.svelte';
+    import { resolve } from '$app/paths';
 
     // les données du +page.server.ts
 	let { data }: PageProps = $props();
@@ -17,7 +18,7 @@
         <div class="card">
             <h3>{p.nom}</h3>
             <p>{p.description}</p>
-            <Button href={`/projet/${p.id}/`}>Voir</Button>
+            <Button href={resolve('/projet/[projetId]', { projetId: String(p.id) })}>Voir</Button>
         </div>
     {/each}
 </div>
