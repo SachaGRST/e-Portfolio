@@ -12,8 +12,10 @@
 
     <h2>Projets</h2>
     <p>À compléter.</p>
-    <Button href={resolve('/(subpages)/projets')}>Voir mes projets</Button>
+    <Button href={resolve('/projets')}>Voir mes projets</Button>
 
     <h2>Productions</h2>
     <p>À compléter.</p>
+
+    <Button href={resolve('/projets')}>Mes projets</Button>
 </main>

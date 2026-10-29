@@ -18,7 +18,7 @@
         <div class="card">
             <h3>{p.nom}</h3>
             <p>{p.description}</p>
-            <Button href={resolve('/(subpages)/projet/[projetId]', { projetId: String(p.id) })}>Voir</Button>
+            <Button href={resolve('/projet/[projetId]', { projetId: String(p.id) })}>Voir</Button>
         </div>
     {/each}
 </div>
