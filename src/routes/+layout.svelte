@@ -24,6 +24,4 @@
 
 {@render children()}
 
-<div>
-    <p><i>Ce footer est présent dans le <a href="https://git.inpt.fr/net7/eportfolio-forma/-/tree/main/src/routes/+layout.svelte" target="_blank">+layout.svelte</a></i></p>
-</div>
+
