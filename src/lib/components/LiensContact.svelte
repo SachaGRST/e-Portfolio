@@ -21,7 +21,7 @@
     <a class={classe} href={infos.linkedin} target="_blank" rel="noopener noreferrer">LinkedIn ↗</a>
 
     <!-- download : le navigateur télécharge le fichier au lieu de l'ouvrir, sous ce nom -->
-    <a class={classe} href={asset('cv.pdf')} download="CV-{infos.nom.replace(' ', '-')}.pdf">
+    <a class={classe} href={asset('CV GARROUSTE Sacha.pdf')} download="CV-{infos.nom.replace(' ', '-')}.pdf">
         {t({ fr: 'Télécharger mon CV', en: 'Download my CV' })} ↓
     </a>
 </div>

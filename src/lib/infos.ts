@@ -5,5 +5,5 @@ export const infos = {
     nom: 'Sacha Garrouste',
 
     // À REMPLACER : l'adresse de ton profil LinkedIn
-    linkedin: 'https://www.linkedin.com/in/ton-profil/'
+    linkedin: 'https://www.linkedin.com/in/sacha-garrouste-97405a397/'
 };

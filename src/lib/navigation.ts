@@ -40,13 +40,13 @@ export const sections = {
         menu: { fr: 'Ingénierie', en: 'Engineering' },
         titre: { fr: 'Parcours ingénieur', en: 'Engineering course' },
         description: {
-            fr: "Ma formation d'ingénieur, mes projets et mes productions.",
-            en: 'My engineering studies, projects and productions.'
+            fr: "Ma formation d'ingénieur, mes projets et mes compétences.",
+            en: 'My engineering studies, projects and skills.'
         },
         onglets: [
             { route: '/parcours-ingenieur', titre: { fr: 'Présentation', en: 'Overview' } },
             { route: '/parcours-ingenieur/projets', titre: { fr: 'Projets', en: 'Projects' } },
-            { route: '/parcours-ingenieur/productions', titre: { fr: 'Productions', en: 'Productions' } }
+            { route: '/parcours-ingenieur/competences', titre: { fr: 'Compétences', en: 'Skills' } }
         ]
     },
     mobilite: {
@@ -59,7 +59,6 @@ export const sections = {
         },
         onglets: [
             { route: '/mobilite-internationale', titre: { fr: 'Présentation', en: 'Overview' } },
-            { route: '/mobilite-internationale/pce', titre: { fr: 'PCE', en: 'PCE' } },
             { route: '/mobilite-internationale/lv2', titre: { fr: 'LV2', en: 'LV2' } }
         ]
     },

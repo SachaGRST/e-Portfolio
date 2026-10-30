@@ -5,7 +5,7 @@
 -->
 
 <script lang="ts">
-    // page contient les infos de la page actuelle, dont sa route (ex : '/mobilite-internationale/pce')
+    // page contient les infos de la page actuelle, dont sa route (ex : '/mobilite-internationale/lv2')
     import { page } from '$app/state';
     import { lien, routeActive, type Onglet } from '#lib/navigation.ts';
     import { t } from '#lib/langue.svelte.ts';

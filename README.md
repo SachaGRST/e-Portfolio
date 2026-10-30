@@ -17,9 +17,8 @@ Puis ouvre l'adresse affichée (souvent http://localhost:5173). La page se met �
 | Accueil | `src/routes/+page.svelte` |
 | Parcours ingénieur > Présentation | `src/routes/parcours-ingenieur/+page.svelte` |
 | Parcours ingénieur > Projets | `src/lib/assets/projects.json` (voir plus bas) |
-| Parcours ingénieur > Productions | `src/routes/parcours-ingenieur/productions/+page.svelte` |
+| Parcours ingénieur > Compétences | `src/routes/parcours-ingenieur/competences/+page.svelte` |
 | Mobilité internationale > Présentation | `src/routes/mobilite-internationale/+page.svelte` |
-| Mobilité internationale > PCE | `src/routes/mobilite-internationale/pce/+page.svelte` |
 | Mobilité internationale > LV2 | `src/routes/mobilite-internationale/lv2/+page.svelte` |
 | Développement durable | `src/routes/developpement-durable/+page.svelte` |
 | Sport et activités | `src/routes/sport-activites/+page.svelte` |
@@ -35,13 +34,13 @@ Les zones à remplir sont encadrées en pointillés bleus sur le site, avec la m
 Dans le code, elles ont la classe `a-completer` :
 
 ```svelte
-<p class="a-completer">Décris ton PCE : où, quand...</p>
+<p class="a-completer">Décris ton séjour : où, quand...</p>
 ```
 
 Remplace le texte par le tien, **puis enlève `class="a-completer"`** pour que le cadre disparaisse :
 
 ```svelte
-<p>J'ai effectué mon PCE à Madrid en 2025...</p>
+<p>J'ai effectué mon séjour à Madrid en 2025...</p>
 ```
 
 Tu peux ajouter des titres (`<h2>...</h2>`, `<h3>...</h3>`) et autant de paragraphes (`<p>...</p>`) que tu veux.
@@ -104,7 +103,7 @@ Tout est dans `src/lib/navigation.ts` :
 - **Renommer** : change le texte `menu` (affiché dans le header) ou `titre` (affiché sur la page).
 - **Ajouter un sous-onglet**, par exemple « Semestre à l'étranger » dans Mobilité internationale :
   1. crée le dossier `src/routes/mobilite-internationale/semestre/` avec un fichier `+page.svelte`
-     (copie celui de `pce/` comme modèle) ;
+     (copie celui de `lv2/` comme modèle) ;
   2. ajoute une ligne dans les `onglets` de la section `mobilite` :
      ```ts
      { route: '/mobilite-internationale/semestre', titre: { fr: 'Semestre', en: 'Semester' } }
@@ -132,7 +131,7 @@ Définies dans `src/lib/styles/base.css`, utilisables dans toutes les pages :
 
 1. Plus aucun cadre « À compléter » sur le site, en français **et** en anglais (bouton FR / EN du header).
 2. Ton vrai CV dans `static/cv.pdf` et ton vrai lien LinkedIn dans `src/lib/infos.ts`.
-3. Les liens `https://exemple.com` des productions remplacés ou supprimés.
+3. La page Compétences remplie en français **et** en anglais.
 4. `npm run check` affiche 0 erreur, et `npm run build` se termine par « done ».
 
 ## Mettre en ligne

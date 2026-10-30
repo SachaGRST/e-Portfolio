@@ -7,6 +7,7 @@
     import { menu, lien } from '#lib/navigation.ts';
     import { t } from '#lib/langue.svelte.ts';
     import { infos } from '#lib/infos.ts';
+    import photo from '#lib/assets/photo CV.jpg';
 
     // les cartes de la page : toutes les sections du menu, sauf l'accueil
     const cartes = menu.filter((section) => section.route !== '/');
@@ -23,17 +24,17 @@
          1. dépose ta photo dans src/lib/assets/, par exemple photo.jpg
          2. ajoute dans le <script> : import photo from '#lib/assets/photo.jpg';
          3. remplace la ligne ci-dessous par : <img class="photo" src={photo} alt={infos.nom} /> -->
-    <div class="photo" aria-hidden="true">{initiales}</div>
+    <img class="photo" src={photo} alt={infos.nom} />
 
     <div>
-        <p class="bonjour">{t({ fr: 'Bonjour, je suis', en: "Hi, I'm" })}</p>
+        
         <h1>{infos.nom}</h1>
 
         <Fr>
-            <p class="a-completer">Une phrase qui te présente : ton école, ton année, ta spécialité.</p>
+            <p>Étudiant Ingénieur - Département Électronique, Énergie Électrique et Automatique à l'ENSEEIHT (Toulouse INP)</p>
         </Fr>
         <En>
-            <p class="a-completer">La même phrase, en anglais.</p>
+            <p>Engineering Student - Electrical Engineering, Electronics Control @ ENSEEIHT (Toulouse INP)</p>
         </En>
 
         <LiensContact />
@@ -67,7 +68,6 @@
 <style>
     .intro {
         display: flex;
-        flex-wrap: wrap;
         align-items: center;
         gap: 2rem;
         margin-bottom: 1rem;
@@ -87,11 +87,6 @@
         font-weight: 700;
     }
 
-    .bonjour {
-        margin: 0;
-        color: var(--bleu);
-        font-weight: 600;
-    }
 
     h1 {
         font-size: 2.5rem;
