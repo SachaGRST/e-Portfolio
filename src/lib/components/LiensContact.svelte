@@ -5,12 +5,18 @@
 -->
 
 <script lang="ts">
-    // asset() donne le bon chemin vers un fichier du dossier static/ (ici static/cv.pdf)
+    // asset() donne le bon chemin vers un fichier du dossier static/
     import { asset } from '$app/paths';
     import { infos } from '#lib/infos.ts';
-    import { t } from '#lib/langue.svelte.ts';
+    import { langue, t } from '#lib/langue.svelte.ts';
 
     let { compact = false }: { compact?: boolean } = $props();
+
+    // le CV dans la langue du site : static/cv-fr.pdf ou static/cv-en.pdf
+    const cv = $derived(t({ fr: asset('cv-fr.pdf'), en: asset('cv-en.pdf') }));
+
+    // le nom du fichier téléchargé, ex : CV-Sacha-Garrouste-FR.pdf
+    const nomFichier = $derived(`CV-${infos.nom.replace(' ', '-')}-${langue.actuelle.toUpperCase()}.pdf`);
 
     // en version compacte, de simples liens ; sinon, des boutons (classes de base.css)
     const classe = $derived(compact ? 'lien-simple' : 'bouton bouton-secondaire');
@@ -21,7 +27,7 @@
     <a class={classe} href={infos.linkedin} target="_blank" rel="noopener noreferrer">LinkedIn ↗</a>
 
     <!-- download : le navigateur télécharge le fichier au lieu de l'ouvrir, sous ce nom -->
-    <a class={classe} href={asset('CV GARROUSTE Sacha.pdf')} download="CV-{infos.nom.replace(' ', '-')}.pdf">
+    <a class={classe} href={cv} download={nomFichier}>
         {t({ fr: 'Télécharger mon CV', en: 'Download my CV' })} ↓
     </a>
 </div>

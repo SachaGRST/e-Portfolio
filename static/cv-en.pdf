@@ -9,11 +9,11 @@ endobj
 << /Type /Page /Parent 2 0 R /MediaBox [0 0 595 842] /Contents 4 0 R /Resources << /Font << /F1 5 0 R >> >> >>
 endobj
 4 0 obj
-<< /Length 212 >>
+<< /Length 226 >>
 stream
-BT /F1 22 Tf 72 760 Td (CV a remplacer) Tj ET
-BT /F1 12 Tf 72 728 Td (Remplace ce fichier (static/cv.pdf) par ton propre CV en PDF,) Tj ET
-BT /F1 12 Tf 72 712 Td (en gardant exactement le meme nom : cv.pdf) Tj ET
+BT /F1 22 Tf 72 760 Td (CV en anglais a remplacer) Tj ET
+BT /F1 12 Tf 72 728 Td (Remplace ce fichier (static/cv-en.pdf) par ton CV en anglais,) Tj ET
+BT /F1 12 Tf 72 712 Td (en gardant exactement le meme nom : cv-en.pdf) Tj ET
 endstream
 endobj
 5 0 obj
@@ -26,9 +26,9 @@ xref
 0000000058 00000 n 
 0000000115 00000 n 
 0000000241 00000 n 
-0000000504 00000 n 
+0000000518 00000 n 
 trailer
 << /Size 6 /Root 1 0 R >>
 startxref
-574
+588
 %%EOF

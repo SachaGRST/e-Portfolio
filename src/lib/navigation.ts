@@ -85,13 +85,15 @@ export const sections = {
         menu: { fr: 'Carrière', en: 'Career' },
         titre: { fr: 'Projet professionnel', en: 'Career development' },
         description: {
-            fr: 'Mes stages, mon PEP et mon projet professionnel.',
-            en: 'My internships, PEP and career plans.'
+            fr: 'Mon projet professionnel, mon stage, mon pitch vidéo et mon CV.',
+            en: 'My career plans, internship, video pitch and CV.'
         },
         onglets: [
             { route: '/carriere', titre: { fr: 'Présentation', en: 'Overview' } },
-            { route: '/carriere/stages', titre: { fr: 'Stages', en: 'Internships' } },
-            { route: '/carriere/pep', titre: { fr: 'PEP', en: 'PEP' } }
+            { route: '/carriere/stages', titre: { fr: 'Stage', en: 'Internship' } },
+            { route: '/carriere/pep', titre: { fr: 'PEP', en: 'PEP' } },
+            { route: '/carriere/pitch', titre: { fr: 'Pitch vidéo', en: 'Elevator pitch' } },
+            { route: '/carriere/cv', titre: { fr: 'CV', en: 'CV' } }
         ]
     }
 } satisfies Record<string, Section>;

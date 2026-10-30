@@ -23,9 +23,11 @@ Puis ouvre l'adresse affichée (souvent http://localhost:5173). La page se met �
 | Développement durable | `src/routes/developpement-durable/+page.svelte` |
 | Sport et activités | `src/routes/sport-activites/+page.svelte` |
 | Carrière > Présentation | `src/routes/carriere/+page.svelte` |
-| Carrière > Stages | `src/routes/carriere/stages/+page.svelte` |
+| Carrière > Stage | `src/routes/carriere/stages/+page.svelte` |
 | Carrière > PEP | `src/routes/carriere/pep/+page.svelte` |
-| Nom, lien LinkedIn | `src/lib/infos.ts` |
+| Carrière > Pitch vidéo | le texte : `src/routes/carriere/pitch/+page.svelte`, la vidéo : `src/lib/infos.ts` |
+| Carrière > CV | les fichiers `static/cv-fr.pdf` et `static/cv-en.pdf` |
+| Nom, lien LinkedIn, lien de la vidéo | `src/lib/infos.ts` |
 | Noms des menus et sous-onglets | `src/lib/navigation.ts` |
 
 ## Remplir un texte
@@ -90,8 +92,11 @@ si le JSON est mal écrit, `npm run check` le signale.
 
 ## CV, LinkedIn et photo
 
-- **CV** : remplace le fichier `static/cv.pdf` par ton CV, en gardant exactement le nom `cv.pdf`.
-  Le fichier actuel est un CV provisoire.
+- **CV** : deux fichiers, `static/cv-fr.pdf` (français) et `static/cv-en.pdf` (anglais). Le site affiche
+  et propose au téléchargement celui de la langue choisie. Pour mettre à jour un CV, remplace le fichier
+  en gardant exactement le même nom. `cv-en.pdf` est pour l'instant un CV provisoire.
+- **Pitch vidéo** : mets la vidéo sur YouTube en « non répertoriée », puis colle son lien dans
+  `pitchYoutube` de `src/lib/infos.ts`. La vidéo s'affiche dans l'onglet Carrière > Pitch vidéo.
 - **LinkedIn** : change l'adresse dans `src/lib/infos.ts`.
 - **Photo** : dépose ta photo dans `src/lib/assets/` (par exemple `photo.jpg`) et suis les 3 étapes
   écrites en commentaire en haut de `src/routes/+page.svelte`.
@@ -130,7 +135,7 @@ Définies dans `src/lib/styles/base.css`, utilisables dans toutes les pages :
 ## Avant de rendre le portfolio
 
 1. Plus aucun cadre « À compléter » sur le site, en français **et** en anglais (bouton FR / EN du header).
-2. Ton vrai CV dans `static/cv.pdf` et ton vrai lien LinkedIn dans `src/lib/infos.ts`.
+2. Tes deux vrais CV dans `static/cv-fr.pdf` et `static/cv-en.pdf`, et le lien de ta vidéo dans `src/lib/infos.ts`.
 3. La page Compétences remplie en français **et** en anglais.
 4. `npm run check` affiche 0 erreur, et `npm run build` se termine par « done ».
 
