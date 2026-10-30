@@ -1,15 +1,198 @@
-/* c'est une bonne pratique de définir un fichier base.css pour enregistrer les : */
-/* espacements, fonts, couleurs, ... */
+/* Style commun à tout le site.
+   1. les variables : couleurs, espacements... (change-les ici pour changer tout le site)
+   2. les styles de base des balises (titres, paragraphes, liens)
+   3. des classes réutilisables dans n'importe quelle page :
+      .carte, .grille, .bouton, .bouton-secondaire, .tag, .texte-secondaire, .a-completer */
+
+
+/* ========== 1. Variables ========== */
 
 :root {
-    --size-big: 1.5rem;
-    --size-medium: 1rem;
-    --size-small: 0.5rem;
+    /* couleurs */
+    --bleu: #1d4ed8;              /* couleur principale : liens, boutons, menu */
+    --bleu-fonce: #1e3a8a;        /* survol des liens et boutons */
+    --bleu-clair: #eff6ff;        /* fonds légers */
+    --texte: #1e293b;             /* texte principal (gris très foncé) */
+    --texte-secondaire: #64748b;  /* texte moins important (dates, descriptions) */
+    --fond: #ffffff;
+    --fond-secondaire: #f8fafc;   /* fond du pied de page */
+    --bordure: #e2e8f0;
 
-    font-family: 'Inter', sans-serif;
+    /* espacements */
+    --size-small: 0.5rem;
+    --size-medium: 1rem;
+    --size-big: 1.5rem;
+
+    /* formes */
+    --arrondi: 12px;
+    --ombre: 0 4px 16px rgba(15, 23, 42, 0.08);
+    --largeur-contenu: 860px;     /* largeur maximale du texte des pages */
+
+    font-family: 'Inter', system-ui, sans-serif;
+    color: var(--texte);
+    background-color: var(--fond);
+    line-height: 1.6;
 }
 
-/* enlève la marge par défaut du navigateur, sinon il reste un écart sur les bords */
+
+/* ========== 2. Balises ========== */
+
+/* le padding et la bordure sont inclus dans la largeur des éléments : évite les débordements */
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+/* enlève la marge par défaut du navigateur autour de la page */
 body {
     margin: 0;
+}
+
+h1,
+h2,
+h3 {
+    line-height: 1.25;
+}
+
+h1 {
+    font-size: 2rem;
+    margin: 0 0 var(--size-big);
+}
+
+h2 {
+    font-size: 1.4rem;
+    margin: 2.5rem 0 var(--size-medium);
+}
+
+h3 {
+    font-size: 1.1rem;
+    margin: 0 0 var(--size-small);
+}
+
+p {
+    margin: 0 0 var(--size-medium);
+}
+
+a {
+    color: var(--bleu);
+}
+
+a:hover {
+    color: var(--bleu-fonce);
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+/* contour bleu quand on navigue au clavier (touche Tab) */
+:focus-visible {
+    outline: 2px solid var(--bleu);
+    outline-offset: 2px;
+}
+
+
+/* ========== 3. Classes réutilisables ========== */
+
+/* une carte : un bloc encadré, ex : <div class="carte">...</div> */
+.carte {
+    display: block;
+    padding: var(--size-big);
+    background-color: var(--fond);
+    border: 1px solid var(--bordure);
+    border-radius: var(--arrondi);
+}
+
+/* une carte cliquable : <a class="carte" href="...">...</a> */
+a.carte {
+    color: inherit;
+    text-decoration: none;
+    transition: border-color 0.2s, box-shadow 0.2s, transform 0.2s;
+}
+
+a.carte:hover {
+    border-color: var(--bleu);
+    box-shadow: var(--ombre);
+    transform: translateY(-2px);
+}
+
+/* range des cartes en grille, avec autant de colonnes que la largeur le permet */
+.grille {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+    gap: var(--size-medium);
+}
+
+/* un bouton bleu : <a class="bouton" href="...">Texte</a> */
+.bouton {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.4rem;
+    padding: 0.55rem 1.1rem;
+    border: 1px solid var(--bleu);
+    border-radius: 999px;          /* coins complètement arrondis */
+    background-color: var(--bleu);
+    color: #ffffff;
+    font-weight: 600;
+    text-decoration: none;
+    transition: background-color 0.2s;
+}
+
+.bouton:hover {
+    background-color: var(--bleu-fonce);
+    color: #ffffff;
+}
+
+/* variante : bouton blanc avec bordure bleue, à mettre EN PLUS de .bouton */
+.bouton-secondaire {
+    background-color: transparent;
+    color: var(--bleu);
+}
+
+.bouton-secondaire:hover {
+    background-color: var(--bleu-clair);
+    color: var(--bleu-fonce);
+}
+
+/* une petite étiquette : <span class="tag">Python</span> */
+.tag {
+    display: inline-block;
+    padding: 0.15rem 0.6rem;
+    border-radius: 999px;
+    background-color: var(--bleu-clair);
+    color: var(--bleu-fonce);
+    font-size: 0.85rem;
+}
+
+.texte-secondaire {
+    color: var(--texte-secondaire);
+}
+
+/* un texte à remplacer : encadré en pointillés pour le repérer facilement.
+   Quand tu as écrit ton texte, enlève class="a-completer". */
+.a-completer {
+    padding: var(--size-medium);
+    border: 2px dashed #93c5fd;
+    border-radius: var(--arrondi);
+    color: var(--texte-secondaire);
+    font-style: italic;
+}
+
+.a-completer::before {
+    content: 'À compléter : ';
+    font-style: normal;
+    font-weight: 600;
+    color: var(--bleu);
+}
+
+/* texte invisible à l'écran mais lu par les lecteurs d'écran (accessibilité) */
+.sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    clip-path: inset(50%);
+    white-space: nowrap;
 }

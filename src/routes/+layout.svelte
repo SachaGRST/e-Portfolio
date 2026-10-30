@@ -1,71 +1,62 @@
-<!-- cette interface est lancé à chaque chargement de page -->
-<!-- ici, définissez vos styles communs à chaque page -->
+<!-- ce layout entoure TOUTES les pages du site : header en haut, pied de page en bas -->
+<!-- ici, définissez ce qui est commun à chaque page -->
 
 <script lang="ts">
-    // le favicon est l'icone du site
-	import favicon from '#lib/assets/favicon.svg';
-	import type { LayoutProps } from './$types';
+    // le favicon est l'icône du site, affichée dans l'onglet du navigateur
+    import favicon from '#lib/assets/favicon.svg';
+    import type { LayoutProps } from './$types';
 
-    // importe le style de base
+    // importe le style de base, commun à tout le site
     import '#lib/styles/base.css';
 
-    import Button from '#lib/components/Button.svelte';
-    import { resolve } from '$app/paths';
+    import { onMount } from 'svelte';
+    import { page } from '$app/state';
+    import Header from '#lib/components/Header.svelte';
+    import Footer from '#lib/components/Footer.svelte';
+    import { infos } from '#lib/infos.ts';
+    import { titreDeLaPage } from '#lib/navigation.ts';
+    import { t, restaurerLangue } from '#lib/langue.svelte.ts';
 
-    // le children est un Snippet, il contient le code HTML, CSS, TS de la page +page.svelte
-    // il peut être rendu par le layout avec @render
-	let { children }: LayoutProps = $props();
+    // le children est un Snippet, il contient le contenu de la page affichée (+page.svelte)
+    // il est rendu par le layout avec @render
+    let { children }: LayoutProps = $props();
+
+    // onMount : exécuté une fois, dans le navigateur, quand le site est chargé
+    onMount(restaurerLangue);
+
+    // le titre de l'onglet du navigateur, calculé à partir de src/lib/navigation.ts
+    const titre = $derived(titreDeLaPage(page.route.id));
 </script>
 
-<!-- svelte:head est un alias, si vous allez dans src/app.html, vous voyez son emplacement -->
-<!-- il remplace %sveltekit.head% -->
-<!-- c'est comme ça qu'on défini l'icone du site, dans le head -->
-<!-- vous pouvez ajouter d'autres meta/links ici -->
+<!-- svelte:head ajoute des balises dans le <head> de la page (voir src/app.html) -->
 <svelte:head>
-	<link rel="icon" href={favicon} />
+    <link rel="icon" href={favicon} />
+    <title>{titre ? `${t(titre)} · ${infos.nom}` : infos.nom}</title>
 </svelte:head>
 
-<header>
-    <a class="nom" href={resolve('/')}>Sacha Garrouste</a>
+<div class="site">
+    <Header />
 
-    <nav>
-        <Button href={resolve('/')}>Accueil</Button>
-        <Button href={resolve('/parcours-ingenieur')}>Ingénierie</Button>
-        <Button href={resolve('/mobilite-internationale')}>Internationale</Button>
-        <Button href={resolve('/developpement-durable')}>Développement durable et engagement citoyen</Button>
-        <Button href={resolve('/sport-activites')}>Activités</Button>
-        <Button href={resolve('/carriere')}>Projet professionnel</Button>
-    </nav>
-</header>
+    <main>
+        {@render children()}
+    </main>
 
-{@render children()}
+    <Footer />
+</div>
 
 <style>
-    header {
+    /* le pied de page reste en bas de l'écran même quand la page est courte */
+    .site {
         display: flex;
-        justify-content: space-between; /* nom à gauche, menu à droite */
-        align-items: center;
-        flex-wrap: wrap;
-        gap: var(--size-medium);
-        padding: var(--size-medium) 2rem;
-        background-color: rgb(158, 158, 158);
-        position: sticky;
-        top: 0;                         /* sans top, sticky ne fait rien */
-        z-index: 10;                    /* reste au-dessus du contenu qui défile */
+        flex-direction: column;
+        min-height: 100vh;
     }
 
-    .nom {
-        font-size: var(--size-big);
-        font-weight: bold;
-        color: inherit;
-        text-decoration: none;
-    }
-
-    nav {
-        display: flex;
-        flex-wrap: wrap;
-        gap: var(--size-medium);
-        
+    main {
+        flex: 1;                              /* prend toute la hauteur disponible */
+        width: 100%;
+        max-width: var(--largeur-contenu);
+        margin: 0 auto;                       /* centré horizontalement */
+        padding: 2.5rem 1.25rem 4rem;
     }
 </style>
-

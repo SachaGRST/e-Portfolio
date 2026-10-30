@@ -1,20 +1,105 @@
+<!-- page d'accueil (Welcome) -->
+
 <script lang="ts">
-    // le code typescript est exécuté au lancement de la page
-    
-    // importer mes composants svelte dans la page
-    import Button from '#lib/components/Button.svelte';
-    import { resolve } from '$app/paths';
+    import Fr from '#lib/components/Fr.svelte';
+    import En from '#lib/components/En.svelte';
+    import LiensContact from '#lib/components/LiensContact.svelte';
+    import { menu, lien } from '#lib/navigation.ts';
+    import { t } from '#lib/langue.svelte.ts';
+    import { infos } from '#lib/infos.ts';
+
+    // les cartes de la page : toutes les sections du menu, sauf l'accueil
+    const cartes = menu.filter((section) => section.route !== '/');
+
+    // tes initiales, affichées à la place de la photo (ex : "SG")
+    const initiales = infos.nom
+        .split(' ')
+        .map((mot) => mot[0])
+        .join('');
 </script>
 
-<svelte:head>
-    <title>Portfolio de Sacha Garrouste</title>
-</svelte:head>
+<section class="intro">
+    <!-- Pour mettre ta photo à la place des initiales (voir le README) :
+         1. dépose ta photo dans src/lib/assets/, par exemple photo.jpg
+         2. ajoute dans le <script> : import photo from '#lib/assets/photo.jpg';
+         3. remplace la ligne ci-dessous par : <img class="photo" src={photo} alt={infos.nom} /> -->
+    <div class="photo" aria-hidden="true">{initiales}</div>
 
+    <div>
+        <p class="bonjour">{t({ fr: 'Bonjour, je suis', en: "Hi, I'm" })}</p>
+        <h1>{infos.nom}</h1>
 
-<main>
-    <h1>Sacha Garrouste</h1>
+        <Fr>
+            <p class="a-completer">Une phrase qui te présente : ton école, ton année, ta spécialité.</p>
+        </Fr>
+        <En>
+            <p class="a-completer">La même phrase, en anglais.</p>
+        </En>
 
-    
-    
-    <Button href="CV/">Mon CV</Button>
-</main>
+        <LiensContact />
+    </div>
+</section>
+
+<h2>{t({ fr: 'Qui suis-je ?', en: 'About me' })}</h2>
+
+<Fr>
+    <p class="a-completer">
+        Présente-toi en quelques lignes : ton parcours, ce qui te motive, ce que tu recherches.
+    </p>
+</Fr>
+<En>
+    <p class="a-completer">Ta présentation, en anglais.</p>
+</En>
+
+<h2>{t({ fr: 'Découvrir mon portfolio', en: 'Explore my portfolio' })}</h2>
+
+<div class="grille">
+    <!-- une carte par section ; (section.route) est la clé qui identifie chaque carte -->
+    {#each cartes as section (section.route)}
+        <a class="carte" href={lien(section.route)}>
+            <h3>{t(section.titre)}</h3>
+            <p class="texte-secondaire">{t(section.description)}</p>
+            <span class="voir">{t({ fr: 'Voir', en: 'View' })} →</span>
+        </a>
+    {/each}
+</div>
+
+<style>
+    .intro {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        gap: 2rem;
+        margin-bottom: 1rem;
+    }
+
+    .photo {
+        display: grid;
+        place-items: center;                  /* centre les initiales */
+        flex-shrink: 0;                       /* la photo ne rétrécit pas */
+        width: 128px;
+        height: 128px;
+        border-radius: 50%;                   /* un cercle */
+        object-fit: cover;                    /* pour une vraie photo : remplit le cercle sans déformer */
+        background-color: var(--bleu-clair);
+        color: var(--bleu);
+        font-size: 2.5rem;
+        font-weight: 700;
+    }
+
+    .bonjour {
+        margin: 0;
+        color: var(--bleu);
+        font-weight: 600;
+    }
+
+    h1 {
+        font-size: 2.5rem;
+        margin-bottom: var(--size-medium);
+    }
+
+    .voir {
+        color: var(--bleu);
+        font-weight: 600;
+    }
+</style>

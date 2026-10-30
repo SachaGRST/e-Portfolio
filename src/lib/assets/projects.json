@@ -1,12 +1,38 @@
 [
     {
         "id": 1,
-        "nom": "Mon projet 1",
-        "description": "Ma description du projet 1."
+        "nom": { "fr": "Titre du projet 1", "en": "Project 1 title" },
+        "date": "2025",
+        "resume": {
+            "fr": "Une phrase qui résume le projet, affichée sur la carte.",
+            "en": "One sentence summarising the project, shown on the card."
+        },
+        "description": {
+            "fr": [
+                "Premier paragraphe : le contexte et l'objectif du projet.",
+                "Deuxième paragraphe : ton rôle, les difficultés rencontrées et ce que tu as appris."
+            ],
+            "en": [
+                "First paragraph: the context and goal of the project.",
+                "Second paragraph: your role, the challenges you faced and what you learned."
+            ]
+        },
+        "competences": ["Python", "Travail en équipe"],
+        "lien": ""
     },
     {
         "id": 2,
-        "nom": "Mon projet 2",
-        "description": "Ma description du projet 2."
+        "nom": { "fr": "Titre du projet 2", "en": "Project 2 title" },
+        "date": "2026",
+        "resume": {
+            "fr": "Une phrase qui résume le projet, affichée sur la carte.",
+            "en": "One sentence summarising the project, shown on the card."
+        },
+        "description": {
+            "fr": ["Décris le projet ici. Chaque texte entre guillemets devient un paragraphe."],
+            "en": ["Describe the project here. Each text between quotes becomes a paragraph."]
+        },
+        "competences": ["Gestion de projet"],
+        "lien": ""
     }
 ]

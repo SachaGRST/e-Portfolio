@@ -1,21 +1,17 @@
+<!-- Parcours ingénieur > Présentation -->
+
 <script lang="ts">
-    import Button from '#lib/components/Button.svelte';
-    import { resolve } from '$app/paths';
+    import Fr from '#lib/components/Fr.svelte';
+    import En from '#lib/components/En.svelte';
 </script>
 
-<svelte:head>
-    <title>Parcours ingénieur</title>
-</svelte:head>
+<Fr>
+    <p class="a-completer">
+        Présente ta formation : ton école, ta filière, les grandes étapes de ton parcours et ce que tu en
+        retiens.
+    </p>
+</Fr>
 
-<main>
-    <h1>Parcours ingénieur</h1>
-
-    <h2>Projets</h2>
-    <p>À compléter.</p>
-    <Button href={resolve('/projets')}>Voir mes projets</Button>
-
-    <h2>Productions</h2>
-    <p>À compléter.</p>
-
-    <Button href={resolve('/projets')}>Mes projets</Button>
-</main>
+<En>
+    <p class="a-completer">La présentation de ta formation, en anglais.</p>
+</En>

@@ -1,13 +1,17 @@
-<svelte:head>
-    <title>Mobilité internationale</title>
-</svelte:head>
+<!-- Mobilité internationale > Présentation -->
 
-<main>
-    <h1>Mobilité internationale</h1>
+<script lang="ts">
+    import Fr from '#lib/components/Fr.svelte';
+    import En from '#lib/components/En.svelte';
+</script>
 
-    <h2>PCE</h2>
-    <p>À compléter.</p>
+<Fr>
+    <p class="a-completer">
+        Résume ton parcours à l'international : séjours, échanges, langues parlées, et ce que ces expériences
+        t'ont apporté.
+    </p>
+</Fr>
 
-    <h2>LV2</h2>
-    <p>À compléter.</p>
-</main>
+<En>
+    <p class="a-completer">Le résumé de ton parcours international, en anglais.</p>
+</En>

@@ -1,0 +1,1 @@
+C'est mon premier projet en svelte donc j'ai besoin que tu sois particulièrement pédagogue.
