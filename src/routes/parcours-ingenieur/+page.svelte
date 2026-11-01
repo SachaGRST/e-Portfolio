@@ -6,12 +6,17 @@
 </script>
 
 <Fr>
-    <p class="a-completer">
-        Présente ta formation : ton école, ta filière, les grandes étapes de ton parcours et ce que tu en
-        retiens.
+
+    <h1>ENSEEIHT (N7) - 1ère année - département 3EA</h1>
+    <p>
+        Formation d'ingénieur en 3 ans axée sur l'<b>Électronique</b>, l'<b>Énergie Électrique</b> et l'<b>Automatique</b>. 
     </p>
 </Fr>
 
 <En>
-    <p class="a-completer">La présentation de ta formation, en anglais.</p>
+    <h1>ENSEEIHT (N7) - 1st year - 3EA department</h1>
+    <p>
+        A 3-year engineering degree focused on <b>Electronics</b>, <b>Electrical Energy</b> and <b>Control Systems</b>.
+    </p>
 </En>
+

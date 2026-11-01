@@ -12,6 +12,8 @@
     const idVideo = infos.pitchYoutube.match(/(?:v=|youtu\.be\/|shorts\/|embed\/)([\w-]{11})/)?.[1];
 </script>
 
+
+
 <Fr>
     <p class="a-completer">
         Une ou deux phrases pour présenter ta vidéo (elle est en anglais) : ton objectif professionnel, tes 3

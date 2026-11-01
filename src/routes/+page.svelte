@@ -44,12 +44,12 @@
 <h2>{t({ fr: 'Qui suis-je ?', en: 'About me' })}</h2>
 
 <Fr>
-    <p class="a-completer">
-        Présente-toi en quelques lignes : ton parcours, ce qui te motive, ce que tu recherches.
+    <p>
+        Je suis un jeune étudiant passionné par les nouvelles technologies et l'informatique. Depuis longtemps j'aime comprendre comment le monde fonctionne. Mon but est d'utiliser la technologie pour faire avancer le monde dans une direction plus responsable, consciente des limites planétaires et sociales.
     </p>
 </Fr>
 <En>
-    <p class="a-completer">Ta présentation, en anglais.</p>
+    <p>I'm a young student passionate about new technologies and computer science. For a long time, I have liked to understand how the world is working. My goal is to use technology to make the world go forward in a responsible way, conscious of planetarium and social limits.</p>
 </En>
 
 <h2>{t({ fr: 'Découvrir mon portfolio', en: 'Explore my portfolio' })}</h2>

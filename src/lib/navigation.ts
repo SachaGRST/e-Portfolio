@@ -54,13 +54,9 @@ export const sections = {
         menu: { fr: 'International', en: 'International' },
         titre: { fr: 'Mobilité internationale', en: 'International mobility' },
         description: {
-            fr: "Mon expérience à l'international et les langues que je parle.",
-            en: 'My international experience and the languages I speak.'
-        },
-        onglets: [
-            { route: '/mobilite-internationale', titre: { fr: 'Présentation', en: 'Overview' } },
-            { route: '/mobilite-internationale/lv2', titre: { fr: 'LV2', en: 'LV2' } }
-        ]
+            fr: 'Mes 3 projets de mobilité internationale et les langues que je parle.',
+            en: 'My 3 international mobility projects and the languages I speak.'
+        }
     },
     engagement: {
         route: '/developpement-durable',

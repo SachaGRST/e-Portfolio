@@ -18,8 +18,7 @@ Puis ouvre l'adresse affichée (souvent http://localhost:5173). La page se met �
 | Parcours ingénieur > Présentation | `src/routes/parcours-ingenieur/+page.svelte` |
 | Parcours ingénieur > Projets | `src/lib/assets/projects.json` (voir plus bas) |
 | Parcours ingénieur > Compétences | `src/routes/parcours-ingenieur/competences/+page.svelte` |
-| Mobilité internationale > Présentation | `src/routes/mobilite-internationale/+page.svelte` |
-| Mobilité internationale > LV2 | `src/routes/mobilite-internationale/lv2/+page.svelte` |
+| Mobilité internationale (projets et langues) | `src/routes/mobilite-internationale/+page.svelte` |
 | Développement durable | `src/routes/developpement-durable/+page.svelte` |
 | Sport et activités | `src/routes/sport-activites/+page.svelte` |
 | Carrière > Présentation | `src/routes/carriere/+page.svelte` |
@@ -106,12 +105,12 @@ si le JSON est mal écrit, `npm run check` le signale.
 Tout est dans `src/lib/navigation.ts` :
 
 - **Renommer** : change le texte `menu` (affiché dans le header) ou `titre` (affiché sur la page).
-- **Ajouter un sous-onglet**, par exemple « Semestre à l'étranger » dans Mobilité internationale :
-  1. crée le dossier `src/routes/mobilite-internationale/semestre/` avec un fichier `+page.svelte`
-     (copie celui de `lv2/` comme modèle) ;
-  2. ajoute une ligne dans les `onglets` de la section `mobilite` :
+- **Ajouter un sous-onglet**, par exemple « Associations » dans Carrière :
+  1. crée le dossier `src/routes/carriere/associations/` avec un fichier `+page.svelte`
+     (copie celui de `pep/` comme modèle) ;
+  2. ajoute une ligne dans les `onglets` de la section `carriere` :
      ```ts
-     { route: '/mobilite-internationale/semestre', titre: { fr: 'Semestre', en: 'Semester' } }
+     { route: '/carriere/associations', titre: { fr: 'Associations', en: 'Associations' } }
      ```
 
 ## Changer les couleurs

@@ -1,38 +1,23 @@
 [
     {
         "id": 1,
-        "nom": { "fr": "Titre du projet 1", "en": "Project 1 title" },
+        "nom": { "fr": "Descente de gradient et apprentissage profond", "en": "Gradient descent and deep learning" },
         "date": "2025",
         "resume": {
-            "fr": "Une phrase qui résume le projet, affichée sur la carte.",
-            "en": "One sentence summarising the project, shown on the card."
+            "fr": "Création d'un algorithme de reconnaissance de caractères manuscrits (EMNIST) via de l'apprentissage machine.",
+            "en": "Creation of a handwritten character recognition algorithm (EMNIST) using machine learning."
         },
         "description": {
             "fr": [
-                "Premier paragraphe : le contexte et l'objectif du projet.",
-                "Deuxième paragraphe : ton rôle, les difficultés rencontrées et ce que tu as appris."
+                "Dans le cadre du dernier semestre de classe prépa (Prépa t²), mon groupe de projet et moi avons découvert et exploré l'apprentissage machine (machin Learning). Le rendu finale de ce projet fut un algorithme de machin Learning codé entièrement de zéro en python, basé sur un réseau neuronale entraînée avec des milliers de données, qui permetait de reconnaîtres des caractères manuscrits",
+                "Mon rôle dans ce projet à été en majorité technique, j'ai codé une majorité de l'algorithme sur lequel nous avons réfléchi en équipe. Le travail en équipe à d'ailleur été une des compétence les plus développée lors de ce projet. "
             ],
             "en": [
-                "First paragraph: the context and goal of the project.",
-                "Second paragraph: your role, the challenges you faced and what you learned."
+                "During the last semester of my preparatory classes (Prépa t²), my project group and I discovered and explored machine learning. The final deliverable was a machine learning algorithm coded entirely from scratch in Python, based on a neural network trained on thousands of samples, which could recognize handwritten characters.",
+                "My role in this project was mostly technical: I coded most of the algorithm, which we designed together as a team. Teamwork was also one of the skills I developed the most during this project."
             ]
         },
-        "competences": ["Python", "Travail en équipe"],
-        "lien": ""
-    },
-    {
-        "id": 2,
-        "nom": { "fr": "Titre du projet 2", "en": "Project 2 title" },
-        "date": "2026",
-        "resume": {
-            "fr": "Une phrase qui résume le projet, affichée sur la carte.",
-            "en": "One sentence summarising the project, shown on the card."
-        },
-        "description": {
-            "fr": ["Décris le projet ici. Chaque texte entre guillemets devient un paragraphe."],
-            "en": ["Describe the project here. Each text between quotes becomes a paragraph."]
-        },
-        "competences": ["Gestion de projet"],
-        "lien": ""
+        "competences": ["Python" , "Machin Learning" , "Mathématiques ", "Travail en équipe"],
+        "lien": "https://github.com/WebyPanda/Projet-Descente-Gradient-et-DeepLearning"
     }
 ]

@@ -9,8 +9,9 @@
 <Fr>
     <div class="liste">
         <article class="carte">
-            <p class="texte-secondaire">Dates · Ville, pays</p>
-            <h3>Intitulé du stage — Entreprise</h3>
+            <p class="texte-secondaire">Juin 2026 · Paris</p>
+            <h3>Analyse stratégique : innovation IA dans le développement
+des systèmes d’information Retail & e-Commerce — Valtech</h3>
             <p class="a-completer">Tes missions, les compétences développées, ce que tu retiens de ce stage.</p>
         </article>
     </div>

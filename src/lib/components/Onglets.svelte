@@ -1,11 +1,11 @@
 <!--
     La barre de sous-onglets affichée sous le titre d'une section.
     Les onglets viennent de src/lib/navigation.ts.
-    Utilisation : <Onglets onglets={sections.mobilite.onglets} />
+    Utilisation : <Onglets onglets={sections.carriere.onglets} />
 -->
 
 <script lang="ts">
-    // page contient les infos de la page actuelle, dont sa route (ex : '/mobilite-internationale/lv2')
+    // page contient les infos de la page actuelle, dont sa route (ex : '/carriere/pep')
     import { page } from '$app/state';
     import { lien, routeActive, type Onglet } from '#lib/navigation.ts';
     import { t } from '#lib/langue.svelte.ts';
