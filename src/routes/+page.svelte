@@ -7,7 +7,7 @@
     import { menu, lien } from '#lib/navigation.ts';
     import { t } from '#lib/langue.svelte.ts';
     import { infos } from '#lib/infos.ts';
-    import photo from '#lib/assets/photo CV.jpg';
+    import photo from '#lib/assets/photo.jpg';
 
     // les cartes de la page : toutes les sections du menu, sauf l'accueil
     const cartes = menu.filter((section) => section.route !== '/');
