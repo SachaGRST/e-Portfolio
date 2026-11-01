@@ -12,7 +12,7 @@
             <p class="texte-secondaire">Juin 2026 · Paris</p>
             <h3>Analyse stratégique : innovation IA dans le développement
 des systèmes d’information Retail & e-Commerce — Valtech</h3>
-            <p class="a-completer">Tes missions, les compétences développées, ce que tu retiens de ce stage.</p>
+            <p class="a-completer"></p>
         </article>
     </div>
 </Fr>
@@ -22,7 +22,7 @@ des systèmes d’information Retail & e-Commerce — Valtech</h3>
         <article class="carte">
             <p class="texte-secondaire">Dates · City, country</p>
             <h3>Internship title — Company</h3>
-            <p class="a-completer">La description du stage, en anglais.</p>
+            <p class="a-completer"></p>
         </article>
     </div>
 </En>

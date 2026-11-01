@@ -15,14 +15,11 @@
 
 
 <Fr>
-    <p class="a-completer">
-        Une ou deux phrases pour présenter ta vidéo (elle est en anglais) : ton objectif professionnel, tes 3
-        modèles, tes 3 projets de mobilité internationale.
-    </p>
+    <p class="a-completer"></p>
 </Fr>
 
 <En>
-    <p class="a-completer">La présentation de ta vidéo, en anglais.</p>
+    <p class="a-completer"></p>
 </En>
 
 {#if idVideo}
@@ -34,7 +31,7 @@
         allowfullscreen
     ></iframe>
 {:else}
-    <p class="a-completer">Colle le lien YouTube de ta vidéo dans src/lib/infos.ts (pitchYoutube).</p>
+    <p class="a-completer"></p>
 {/if}
 
 <style>

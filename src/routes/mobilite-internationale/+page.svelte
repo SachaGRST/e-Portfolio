@@ -14,7 +14,7 @@
 <h1>{t(sections.mobilite.titre)}</h1>
 
 <Fr>
-    <p class="a-completer">Une ou deux phrases pour présenter ton projet à l'international.</p>
+    <p class="a-completer"></p>
 
     <h2>Mes 3 projets de mobilité</h2>
 
@@ -22,19 +22,19 @@
         <div class="carte">
             <h3>Université 1</h3>
             <p class="texte-secondaire">Ville, pays · semestre ou année</p>
-            <p class="a-completer">Pourquoi cette université : les cours, le pays, ce que ça t'apporterait.</p>
+            <p class="a-completer"></p>
         </div>
 
         <div class="carte">
             <h3>Université 2</h3>
             <p class="texte-secondaire">Ville, pays · semestre ou année</p>
-            <p class="a-completer">Pourquoi cette université : les cours, le pays, ce que ça t'apporterait.</p>
+            <p class="a-completer"></p>
         </div>
 
         <div class="carte">
             <h3>Université 3</h3>
             <p class="texte-secondaire">Ville, pays · semestre ou année</p>
-            <p class="a-completer">Pourquoi cette université : les cours, le pays, ce que ça t'apporterait.</p>
+            <p class="a-completer"></p>
         </div>
     </div>
 
@@ -48,7 +48,7 @@
 </Fr>
 
 <En>
-    <p class="a-completer">One or two sentences introducing your international plans.</p>
+    <p class="a-completer"></p>
 
     <h2>My 3 mobility projects</h2>
 
@@ -56,19 +56,19 @@
         <div class="carte">
             <h3>University 1</h3>
             <p class="texte-secondaire">City, country · semester or year</p>
-            <p class="a-completer">Why this university: courses, country, what it would bring you.</p>
+            <p class="a-completer"></p>
         </div>
 
         <div class="carte">
             <h3>University 2</h3>
             <p class="texte-secondaire">City, country · semester or year</p>
-            <p class="a-completer">Why this university: courses, country, what it would bring you.</p>
+            <p class="a-completer"></p>
         </div>
 
         <div class="carte">
             <h3>University 3</h3>
             <p class="texte-secondaire">City, country · semester or year</p>
-            <p class="a-completer">Why this university: courses, country, what it would bring you.</p>
+            <p class="a-completer"></p>
         </div>
     </div>
 

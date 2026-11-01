@@ -11,12 +11,9 @@
 <h1>{t(sections.engagement.titre)}</h1>
 
 <Fr>
-    <p class="a-completer">
-        Présente tes actions en faveur du développement durable et ton engagement citoyen : associations,
-        bénévolat, projets, ce que tu en retiens.
-    </p>
+    <p class="a-completer"></p>
 </Fr>
 
 <En>
-    <p class="a-completer">Tes actions et ton engagement, en anglais.</p>
+    <p class="a-completer"></p>
 </En>

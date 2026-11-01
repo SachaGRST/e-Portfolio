@@ -7,9 +7,9 @@
 </script>
 
 <Fr>
-    <p class="a-completer">Présente ton PEP : son contenu, ce que tu as réalisé et ce que tu en retiens.</p>
+    <p class="a-completer"></p>
 </Fr>
 
 <En>
-    <p class="a-completer">La présentation de ton PEP, en anglais.</p>
+    <p class="a-completer"></p>
 </En>
