@@ -7,7 +7,7 @@
     import { asset } from '$app/paths';
     import { t } from '#lib/langue.svelte.ts';
 
-    const cv = $derived(t({ fr: asset('cv-fr.pdf'), en: asset('cv-en.pdf') }));
+    const cv = $derived(t({ fr: asset('CV-Sacha-GARROUSTE-N7-V1.pdf'), en: asset('CV-Sacha-GARROUSTE-N7-V1.pdf') }));
 </script>
 
 <!-- les boutons LinkedIn et téléchargement, comme sur l'accueil -->

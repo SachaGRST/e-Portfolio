@@ -14,27 +14,21 @@
 <h1>{t(sections.mobilite.titre)}</h1>
 
 <Fr>
-    <p class="a-completer"></p>
 
     <h2>Mes 3 projets de mobilité</h2>
 
     <div class="grille">
         <div class="carte">
-            <h3>Université 1</h3>
-            <p class="texte-secondaire">Ville, pays · semestre ou année</p>
-            <p class="a-completer"></p>
+            <h3>Erasmus TU Eindhoven</h3>
+            <p class="texte-secondaire">Eindhoven, Pays-bas · 2029</p>
+            <p>Département Electrical Engineering de TU Eindhoven</p>
         </div>
+
 
         <div class="carte">
             <h3>Université 2</h3>
-            <p class="texte-secondaire">Ville, pays · semestre ou année</p>
-            <p class="a-completer"></p>
-        </div>
-
-        <div class="carte">
-            <h3>Université 3</h3>
-            <p class="texte-secondaire">Ville, pays · semestre ou année</p>
-            <p class="a-completer"></p>
+            <p class="texte-secondaire">Metz et Atlanta, France et USA · semestre ou année</p>
+            <p>Double diplôme : Masters of science degree in Electrical and Computer</p>
         </div>
     </div>
 
@@ -42,8 +36,8 @@
 
     <!-- une ligne par langue : le nom à gauche, le niveau dans une étiquette à droite -->
     <ul class="carte langues">
-        <li><span>Anglais (LV1)</span> <span class="tag">B2</span></li>
-        <li><span>LV2 : langue</span> <span class="tag">Niveau</span></li>
+        <li><span>Anglais (LV1)</span> <span class="tag">B2 confirmé</span></li>
+        <li><span>Espagnol (LV2)</span> <span class="tag">A2</span></li>
     </ul>
 </Fr>
 
@@ -61,15 +55,10 @@
 
         <div class="carte">
             <h3>University 2</h3>
-            <p class="texte-secondaire">City, country · semester or year</p>
+            <p class="texte-secondaire">, country · semester or year</p>
             <p class="a-completer"></p>
         </div>
 
-        <div class="carte">
-            <h3>University 3</h3>
-            <p class="texte-secondaire">City, country · semester or year</p>
-            <p class="a-completer"></p>
-        </div>
     </div>
 
     <h2>Languages</h2>
