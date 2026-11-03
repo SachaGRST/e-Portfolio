@@ -22,7 +22,7 @@
 
             {#if projet.competences}
                 <div class="tags">
-                    {#each projet.competences as competence (competence)}
+                    {#each t(projet.competences) as competence (competence)}
                         <span class="tag">{competence}</span>
                     {/each}
                 </div>

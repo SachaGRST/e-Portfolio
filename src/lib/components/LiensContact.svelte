@@ -12,8 +12,8 @@
 
     let { compact = false }: { compact?: boolean } = $props();
 
-    // le CV dans la langue du site : static/cv-fr.pdf ou static/cv-en.pdf
-    const cv = $derived(t({ fr: asset('cv-fr.pdf'), en: asset('cv-en.pdf') }));
+    // le CV dans la langue du site (fichiers du dossier static/)
+    const cv = $derived(t({ fr: asset('CV-Sacha-GARROUSTE-N7-V1.pdf'), en: asset('CV-Sacha-GARROUSTE-N7-EN.pdf') }));
 
     // le nom du fichier téléchargé, ex : CV-Sacha-Garrouste-FR.pdf
     const nomFichier = $derived(`CV-${infos.nom.replace(' ', '-')}-${langue.actuelle.toUpperCase()}.pdf`);

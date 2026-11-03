@@ -3,25 +3,12 @@
      Mets-la en « non répertoriée » sur YouTube : seules les personnes qui ont le lien peuvent la voir. -->
 
 <script lang="ts">
-    import Fr from '#lib/components/Fr.svelte';
-    import En from '#lib/components/En.svelte';
     import { infos } from '#lib/infos.ts';
 
     // un lien YouTube contient un identifiant de 11 caractères (ex : youtu.be/abcdefghijk) ;
     // on le récupère pour construire l'adresse du lecteur intégré
     const idVideo = infos.pitchYoutube.match(/(?:v=|youtu\.be\/|shorts\/|embed\/)([\w-]{11})/)?.[1];
 </script>
-
-
-
-<Fr>
-    <p class="a-completer"></p>
-</Fr>
-
-<En>
-    <p class="a-completer"></p>
-</En>
-
 {#if idVideo}
     <!-- youtube-nocookie : la version de YouTube qui ne dépose pas de cookies publicitaires -->
     <iframe

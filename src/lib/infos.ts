@@ -1,5 +1,6 @@
 // Tes informations personnelles, utilisées dans le header, l'accueil, le pied de page et l'onglet Carrière.
-// Les CV ne sont pas ici : ce sont les fichiers static/cv-fr.pdf et static/cv-en.pdf (voir le README).
+// Les CV ne sont pas ici : ce sont les fichiers static/CV-Sacha-GARROUSTE-N7-V1.pdf (français)
+// et static/CV-Sacha-GARROUSTE-N7-EN.pdf (anglais), voir le README.
 
 export const infos = {
     nom: 'Sacha Garrouste',

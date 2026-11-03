@@ -10,6 +10,6 @@ export type Projet = {
     date?: string;                      // ex : "2025" ou "Semestre 5"
     resume: Bilingue;                   // une phrase, affichée sur la carte
     description: Bilingue<string[]>;    // les paragraphes de la page du projet
-    competences?: string[];             // affichées en petites étiquettes
+    competences?: Bilingue<string[]>;   // affichées en petites étiquettes
     lien?: string;                      // lien externe (GitHub, rapport...)
 };

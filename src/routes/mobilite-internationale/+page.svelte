@@ -42,30 +42,28 @@
 </Fr>
 
 <En>
-    <p class="a-completer"></p>
-
     <h2>My 3 mobility projects</h2>
 
     <div class="grille">
         <div class="carte">
-            <h3>University 1</h3>
-            <p class="texte-secondaire">City, country · semester or year</p>
-            <p class="a-completer"></p>
+            <h3>Erasmus TU Eindhoven</h3>
+            <p class="texte-secondaire">Eindhoven, Netherlands · 2029</p>
+            <p>Electrical Engineering department of TU Eindhoven</p>
         </div>
+
 
         <div class="carte">
-            <h3>University 2</h3>
-            <p class="texte-secondaire">, country · semester or year</p>
-            <p class="a-completer"></p>
+            <h3>Université 2</h3>
+            <p class="texte-secondaire">Metz and Atlanta, France and USA · semester or year</p>
+            <p>Double degree: Master of Science in Electrical and Computer Engineering</p>
         </div>
-
     </div>
 
     <h2>Languages</h2>
 
     <ul class="carte langues">
-        <li><span>English (L1)</span> <span class="tag">B2</span></li>
-        <li><span>L2: language</span> <span class="tag">Level</span></li>
+        <li><span>English (L1)</span> <span class="tag">Confirmed B2</span></li>
+        <li><span>Spanish (L2)</span> <span class="tag">A2</span></li>
     </ul>
 </En>
 

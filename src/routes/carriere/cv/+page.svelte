@@ -1,5 +1,6 @@
 <!-- Carrière > CV
-     Affiche le CV dans la langue du site : static/cv-fr.pdf en français, static/cv-en.pdf en anglais.
+     Affiche le CV dans la langue du site : static/CV-Sacha-GARROUSTE-N7-V1.pdf en français,
+     static/CV-Sacha-GARROUSTE-N7-EN.pdf en anglais.
      Pour mettre à jour un CV : remplace le fichier en gardant exactement le même nom. -->
 
 <script lang="ts">
@@ -7,7 +8,7 @@
     import { asset } from '$app/paths';
     import { t } from '#lib/langue.svelte.ts';
 
-    const cv = $derived(t({ fr: asset('CV-Sacha-GARROUSTE-N7-V1.pdf'), en: asset('CV-Sacha-GARROUSTE-N7-V1.pdf') }));
+    const cv = $derived(t({ fr: asset('CV-Sacha-GARROUSTE-N7-V1.pdf'), en: asset('CV-Sacha-GARROUSTE-N7-EN.pdf') }));
 </script>
 
 <!-- les boutons LinkedIn et téléchargement, comme sur l'accueil -->

@@ -17,7 +17,10 @@
                 "My role in this project was mostly technical: I coded most of the algorithm, which we designed together as a team. Teamwork was also one of the skills I developed the most during this project."
             ]
         },
-        "competences": ["Python" , "Machin Learning" , "Mathématiques ", "Travail en équipe"],
+        "competences": {
+            "fr": ["Python", "Machine Learning", "Mathématiques", "Travail en équipe"],
+            "en": ["Python", "Machine Learning", "Mathematics", "Teamwork"]
+        },
         "lien": "https://github.com/WebyPanda/Projet-Descente-Gradient-et-DeepLearning"
     }
 ]

@@ -21,11 +21,9 @@ Puis ouvre l'adresse affichée (souvent http://localhost:5173). La page se met �
 | Mobilité internationale (projets et langues) | `src/routes/mobilite-internationale/+page.svelte` |
 | Développement durable | `src/routes/developpement-durable/+page.svelte` |
 | Sport et activités | `src/routes/sport-activites/+page.svelte` |
-| Carrière > Présentation | `src/routes/carriere/+page.svelte` |
-| Carrière > Stage | `src/routes/carriere/stages/+page.svelte` |
-| Carrière > PEP | `src/routes/carriere/pep/+page.svelte` |
+| Carrière > Stage | `src/routes/carriere/+page.svelte` |
 | Carrière > Pitch vidéo | le texte : `src/routes/carriere/pitch/+page.svelte`, la vidéo : `src/lib/infos.ts` |
-| Carrière > CV | les fichiers `static/cv-fr.pdf` et `static/cv-en.pdf` |
+| Carrière > CV | les fichiers `static/CV-Sacha-GARROUSTE-N7-V1.pdf` (FR) et `static/CV-Sacha-GARROUSTE-N7-EN.pdf` (EN) |
 | Nom, lien LinkedIn, lien de la vidéo | `src/lib/infos.ts` |
 | Noms des menus et sous-onglets | `src/lib/navigation.ts` |
 
@@ -81,7 +79,7 @@ et sa propre page. Pour en ajouter un, copie un bloc `{ ... }` et change son `id
         "fr": ["Premier paragraphe.", "Deuxième paragraphe."],
         "en": ["First paragraph.", "Second paragraph."]
     },
-    "competences": ["C", "Électronique"],
+    "competences": { "fr": ["C", "Électronique"], "en": ["C", "Electronics"] },
     "lien": "https://github.com/..."
 }
 ```
@@ -91,9 +89,11 @@ si le JSON est mal écrit, `npm run check` le signale.
 
 ## CV, LinkedIn et photo
 
-- **CV** : deux fichiers, `static/cv-fr.pdf` (français) et `static/cv-en.pdf` (anglais). Le site affiche
-  et propose au téléchargement celui de la langue choisie. Pour mettre à jour un CV, remplace le fichier
-  en gardant exactement le même nom. `cv-en.pdf` est pour l'instant un CV provisoire.
+- **CV** : deux fichiers, `static/CV-Sacha-GARROUSTE-N7-V1.pdf` (français) et
+  `static/CV-Sacha-GARROUSTE-N7-EN.pdf` (anglais). Le site affiche et propose au téléchargement celui de la
+  langue choisie. Pour mettre à jour un CV, remplace le fichier en gardant exactement le même nom (majuscules
+  comprises). Pour changer de nom, modifie aussi `src/lib/components/LiensContact.svelte` et
+  `src/routes/carriere/cv/+page.svelte`.
 - **Pitch vidéo** : mets la vidéo sur YouTube en « non répertoriée », puis colle son lien dans
   `pitchYoutube` de `src/lib/infos.ts`. La vidéo s'affiche dans l'onglet Carrière > Pitch vidéo.
 - **LinkedIn** : change l'adresse dans `src/lib/infos.ts`.
@@ -107,7 +107,7 @@ Tout est dans `src/lib/navigation.ts` :
 - **Renommer** : change le texte `menu` (affiché dans le header) ou `titre` (affiché sur la page).
 - **Ajouter un sous-onglet**, par exemple « Associations » dans Carrière :
   1. crée le dossier `src/routes/carriere/associations/` avec un fichier `+page.svelte`
-     (copie celui de `pep/` comme modèle) ;
+     (copie celui de `pitch/` comme modèle) ;
   2. ajoute une ligne dans les `onglets` de la section `carriere` :
      ```ts
      { route: '/carriere/associations', titre: { fr: 'Associations', en: 'Associations' } }
@@ -134,7 +134,7 @@ Définies dans `src/lib/styles/base.css`, utilisables dans toutes les pages :
 ## Avant de rendre le portfolio
 
 1. Plus aucun cadre « À compléter » sur le site, en français **et** en anglais (bouton FR / EN du header).
-2. Tes deux vrais CV dans `static/cv-fr.pdf` et `static/cv-en.pdf`, et le lien de ta vidéo dans `src/lib/infos.ts`.
+2. Tes deux CV à jour dans `static/`, et le lien de ta vidéo dans `src/lib/infos.ts`.
 3. La page Compétences remplie en français **et** en anglais.
 4. `npm run check` affiche 0 erreur, et `npm run build` se termine par « done ».
 

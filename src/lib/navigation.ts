@@ -81,13 +81,12 @@ export const sections = {
         menu: { fr: 'Carrière', en: 'Career' },
         titre: { fr: 'Projet professionnel', en: 'Career development' },
         description: {
-            fr: 'Mon projet professionnel, mon stage, mon pitch vidéo et mon CV.',
-            en: 'My career plans, internship, video pitch and CV.'
+            fr: 'Mon stage, mon pitch vidéo et mon CV.',
+            en: 'My internship, video pitch and CV.'
         },
         onglets: [
-            { route: '/carriere', titre: { fr: 'Présentation', en: 'Overview' } },
-            { route: '/carriere/stages', titre: { fr: 'Stage', en: 'Internship' } },
-            { route: '/carriere/pep', titre: { fr: 'PEP', en: 'PEP' } },
+            // le premier onglet a la même adresse que la section : c'est la page ouverte par le menu
+            { route: '/carriere', titre: { fr: 'Stage', en: 'Internship' } },
             { route: '/carriere/pitch', titre: { fr: 'Pitch vidéo', en: 'Elevator pitch' } },
             { route: '/carriere/cv', titre: { fr: 'CV', en: 'CV' } }
         ]
